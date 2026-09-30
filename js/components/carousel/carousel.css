@@ -1,0 +1,102 @@
+.carousel {
+    background-color: #F5F9F6;
+    height: 718px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-top: 75px;
+
+    h2 {
+        font-size: 52px;
+        line-height: 120%;
+        margin: 0;
+
+        .highlight {
+            font-weight: 400;
+            color: var(--text-green);
+
+        }
+
+        @media (max-width: 786px) {
+            font-size: 24px;
+            line-height: 100%;
+            padding: 0px 20px;
+        }
+    }
+
+    @media (max-width: 786px) {
+        height: 384px;
+        padding-top: 40px;
+    }
+
+    .carousel-viewport {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        width: 75%;
+        margin-top: 50px;
+    }
+
+    .carousel-track {
+        display: flex;
+        gap: 24px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .card {
+            flex: 0 0 auto;
+            scroll-snap-align: start;
+        }
+    }
+
+    .carousel-actions {
+        display: flex;
+        width:100%;
+        justify-content: space-evenly;
+        margin-top: 70px;
+
+        .carousel-arrow {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+            background: none;
+
+            @media (max-width: 786px) {
+                display: none;
+            }
+        }
+
+        .carousel-dots {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 24px;
+
+            .carousel-dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: none;
+                padding: 0;
+                background-color: #d3d3d3;
+                cursor: pointer;
+
+                &.active {
+                    background-color: var(--main-green);
+                }
+            }
+        }
+    }
+
+}

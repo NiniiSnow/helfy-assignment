@@ -1,0 +1,56 @@
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    width: 380px;
+    text-align: center;
+
+    .card-name {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .card-date {
+        font-size: 14px;
+        font-style: italic;
+        color: #6b6b6b;
+        margin: 6px 0 20px;
+    }
+
+    .card-text {
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 140%;
+        margin: 0;
+
+        .highlight {
+            color: var(--text-green);
+        }
+    }
+
+    .card-dots {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 20px 0;
+    }
+
+    .card-verified {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 14px;
+        color: #6b6b6b;
+
+        .card-verified-icon {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    @media (max-width: 390px) {
+        width: 100%;
+        padding: 30px 20px;
+    }
+}
