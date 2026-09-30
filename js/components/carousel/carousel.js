@@ -1,4 +1,5 @@
 import { Card } from '../card/card.js';
+import { REVIEWS } from '../../data/card.js';
 
 export function Carousel() {
     const link = document.createElement('link');
@@ -6,33 +7,7 @@ export function Carousel() {
     link.href = new URL('./carousel.css', import.meta.url);
     document.head.appendChild(link);
 
-    const reviews = [
-        {
-            name: 'Rainer N.',
-            date: '25 October',
-            text: 'Einfach und <span class="highlight">unkompliziert 3 Bestellungen</span> bisher gemacht und hat immer reibungslos funktioniert, Preislich auch alles im Rahmen',
-        },
-        {
-            name: 'Rainer N.',
-            date: '25 October',
-            text: 'Einfach und <span class="highlight">unkompliziert 3 Bestellungen</span> bisher gemacht und hat immer reibungslos funktioniert, Preislich auch alles im Rahmen',
-        },
-        {
-            name: 'Rainer N.',
-            date: '25 October',
-            text: 'Einfach und <span class="highlight">unkompliziert 3 Bestellungen</span> bisher gemacht und hat immer reibungslos funktioniert, Preislich auch alles im Rahmen',
-        },
-        {
-            name: 'Rainer 2.',
-            date: '25 October',
-            text: 'Einfach und <span class="highlight">unkompliziert 3 Bestellungen</span> bisher gemacht und hat immer reibungslos funktioniert, Preislich auch alles im Rahmen',
-        },
-        {
-            name: 'Rainer 1.',
-            date: '25 October',
-            text: 'Einfach und <span class="highlight">unkompliziert 3 Bestellungen</span> bisher gemacht und hat immer reibungslos funktioniert, Preislich auch alles im Rahmen',
-        },
-    ];
+    const reviews = REVIEWS;
 
     return `
     <section class="carousel">

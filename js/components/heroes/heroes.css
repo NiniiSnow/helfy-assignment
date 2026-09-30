@@ -5,6 +5,7 @@
 
     h1 {
         margin: 0;
+        font-weight: 600;
     }
 
     @media (max-width: 1280px) {
@@ -109,7 +110,7 @@
         }
 
         .highlight {
-            font-weight: bold;
+            font-weight: 500;
         }
 
         .note {
