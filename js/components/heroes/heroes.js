@@ -18,10 +18,9 @@ export function Heroes() {
         rating: 4.81,
     };
 
-    const maxStars = 5;
     const filledStars = Math.ceil(ratingExample.rating);
-    const stars = Array.from({ length: maxStars }, (_, i) =>
-        `<span class="star${i < filledStars ? ' filled' : ''}">★</span>`
+    const stars = Array.from({ length: filledStars }, (_, i) =>
+        `<img src="/assets/images/star.svg" alt="Star ${i + 1}">`
     ).join('');
 
     return `
@@ -41,7 +40,8 @@ export function Heroes() {
             <span>${stars}</span>
             </p>
             <div class="rating-value">
-              ${ratingExample.rating} Sehr gut
+              ${ratingExample.rating} 
+              <span>Sehr gut</span>
             </div>
           </div>
         </div>

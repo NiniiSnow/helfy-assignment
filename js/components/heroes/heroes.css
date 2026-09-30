@@ -22,12 +22,12 @@
             height: 286px;
             max-width: 100%;
             width: 100%;
-            
+
         }
     }
 
     .hero-content {
-        width:fit-content;
+        width: fit-content;
         padding: 40px;
         display: flex;
         flex-direction: column;
@@ -62,7 +62,7 @@
 
             @media (max-width: 786px) {
                 font-size: 18px;
-                line-height:140%;
+                line-height: 140%;
             }
         }
 
@@ -70,7 +70,7 @@
             list-style: none;
             padding: 0;
             margin: 0;
-            width:100%;
+            width: 100%;
 
             .hero-feature {
                 background-color: var(--light-green);
@@ -159,20 +159,29 @@
                 margin-top: 20px;
             }
 
-            .rating-text{
+            .rating-text {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: flex-start;
+                font-family: 'Roboto', Arial, sans-serif;
+                font-weight: 400;
+                font-size: 19.41px;
 
-                p{
+                p {
                     margin: 0;
                 }
 
                 .rating-value {
-                    font-size: 20px;
+                    font-size: 20.2px;
                     line-height: 114%;
                     font-weight: 600;
+
+                    span {
+                        font-size: 18.09px;
+                        line-height: 114%;
+                        font-weight: 700;
+                    }
 
                     @media (max-width: 1280px) {
                         font-size: 13px;
