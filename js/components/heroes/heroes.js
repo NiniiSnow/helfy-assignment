@@ -28,10 +28,12 @@ export function Heroes() {
       <img src="/assets/images/white-male.png" alt="White Male" class="hero-image">
       <div class="hero-content">
         <h1 class="hero-title">Online-Arzt- und Apothekenservice</h1>
-        <p class="hero-description">Behandlungen online verschrieben und nach Hause geliefert</p>
-        <ul class="hero-features">
-          ${features.map(feature => `<li class="hero-feature">${feature}</li>`).join('')}
-        </ul>
+        <div class="hero-description-container">
+          <p class="hero-description">Behandlungen online verschrieben und nach Hause geliefert</p>
+          <ul class="hero-features">
+            ${features.map(feature => `<li class="hero-feature">${feature}</li>`).join('')}
+          </ul>
+        </div>
         <button class="hero-button">Jetzt Rezept anfordern!</button>
         <div class="rating-example">
           <img src="${ratingExample.icon}" alt="${ratingExample.alt}" class="rating-icon">
@@ -48,4 +50,19 @@ export function Heroes() {
       </div>
     </section>
   `;
+}
+
+export function initHeroButton() {
+    const button = document.querySelector('.hero-button');
+    if (!button) return;
+
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+        const scrollingDown = currentScrollY > lastScrollY;
+
+        button.classList.toggle('hero-button--hidden', scrollingDown && currentScrollY > 50);
+        lastScrollY = currentScrollY;
+    });
 }

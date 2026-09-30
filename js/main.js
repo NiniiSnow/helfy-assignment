@@ -1,5 +1,5 @@
 import { Header } from './components/header/header.js';
-import { Heroes } from './components/heroes/heroes.js';
+import { Heroes, initHeroButton } from './components/heroes/heroes.js';
 import { Carousel, initCarousel } from './components/carousel/carousel.js';
 import { Footer } from './components/footer/footer.js';
 
@@ -14,3 +14,4 @@ mainContent.innerHTML = `
 `;
 
 initCarousel();
+initHeroButton();

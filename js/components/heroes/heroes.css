@@ -51,60 +51,64 @@
             }
         }
 
-        .hero-description {
-            font-size: 22px;
-            line-height: 36px;
-
-            @media (max-width: 1280px) {
-                font-size: 16px;
-                line-height: 24px;
-            }
-
-            @media (max-width: 786px) {
-                font-size: 18px;
-                line-height: 140%;
-            }
-        }
-
-        .hero-features {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            width: 100%;
-
-            .hero-feature {
-                background-color: var(--light-green);
-                margin-top: 8px;
-                border-radius: 5px;
-                padding: 10px 10px 10px 55px;
-                width: 100%;
-                position: relative;
-
-                &::before {
-                    content: '';
-                    position: absolute;
-                    left: 25px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    width: 20px;
-                    height: 20px;
-                    background: url('/assets/images/check.svg') no-repeat center / contain;
-
-                    @media (max-width: 1280px) {
-                        left: 17px;
-                    }
-
-                    @media (max-width: 786px) {
-                        left: 14px;
-                    }
-                }
+        .hero-description-container {
+            .hero-description {
+                font-size: 22px;
+                line-height: 36px;
 
                 @media (max-width: 1280px) {
-                    padding: 10px 10px 10px 36px;
+                    font-size: 16px;
+                    line-height: 24px;
                 }
 
                 @media (max-width: 786px) {
-                    padding: 10px 10px 10px 45px;
+                    font-size: 18px;
+                    line-height: 140%;
+                }
+            }
+
+            .hero-features {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+
+                .hero-feature {
+                    background-color: var(--light-green);
+                    margin-top: 8px;
+                    border-radius: 5px;
+                    padding: 10px 10px 10px 55px;
+                    width: 100%;
+                    /* width: fit-content; */
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 25px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 20px;
+                        height: 20px;
+                        background: url('/assets/images/check.svg') no-repeat center / contain;
+
+                        @media (max-width: 1280px) {
+                            left: 17px;
+                        }
+
+                        @media (max-width: 786px) {
+                            left: 14px;
+                        }
+                    }
+
+                    @media (max-width: 1280px) {
+                        padding: 10px 10px 10px 36px;
+                    }
+
+                    @media (max-width: 786px) {
+                        padding: 10px 10px 10px 45px;
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -143,8 +147,24 @@
             }
 
             @media (max-width: 786px) {
-                visibility: hidden;
-                display: none;
+                position: fixed;
+                left: 20px;
+                right: 20px;
+                bottom: 20px;
+                width: auto;
+                z-index: 100;
+                transition: transform 0.3s ease;
+                font-size: 22px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 60px;
+                
+
+                &.hero-button--hidden {
+                    transform: translateY(150%);
+                }
             }
         }
 
@@ -157,6 +177,10 @@
             @media (max-width: 1280px) {
                 height: 35px;
                 margin-top: 20px;
+            }
+
+            @media (max-width: 786px) {
+                flex-direction: row;
             }
 
             .rating-text {
@@ -186,6 +210,12 @@
                     @media (max-width: 1280px) {
                         font-size: 13px;
                     }
+                }
+
+                @media (max-width: 786px) {
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 8px;
                 }
             }
         }
