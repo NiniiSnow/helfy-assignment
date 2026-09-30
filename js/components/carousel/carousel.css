@@ -6,6 +6,12 @@
     justify-content: flex-start;
     flex-direction: column;
     padding-top: 75px;
+    gap: 30px;
+
+    @media (max-width: 786px) {
+        height: 556px;
+        padding-top: 40px;
+    }
 
     h2 {
         font-size: 52px;
@@ -22,23 +28,20 @@
             font-size: 24px;
             line-height: 100%;
             padding: 0px 20px;
+            text-align: center;
+
         }
     }
 
-    @media (max-width: 786px) {
-        height: 384px;
-        padding-top: 40px;
-    }
 
-    .carousel-viewport {
+    .carousel-main {
         display: flex;
         align-items: center;
         gap: 16px;
         width: 75%;
-        margin-top: 50px;
     }
 
-    .carousel-track {
+    .carousel-content {
         display: flex;
         gap: 24px;
         overflow-x: auto;
@@ -58,12 +61,10 @@
 
     .carousel-actions {
         display: flex;
-        width:100%;
+        width: 100%;
         justify-content: space-evenly;
-        margin-top: 70px;
 
         .carousel-arrow {
-            flex: 0 0 auto;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -71,8 +72,22 @@
             border: none;
             background: none;
 
-            @media (max-width: 786px) {
+            .carousel-arrow-desktop {
+                display: block;
+            }
+
+            .carousel-arrow-mobile {
                 display: none;
+            }
+
+            @media (max-width: 786px) {
+                .carousel-arrow-desktop {
+                    display: none;
+                }
+
+                .carousel-arrow-mobile {
+                    display: block;
+                }
             }
         }
 

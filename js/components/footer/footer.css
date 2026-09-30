@@ -1,14 +1,98 @@
 .footer {
     background-color: var(--black);
     height: 451px;
-    width:100%;
-    margin: 23px;
+    width: auto;
+    border-radius: 43px;
+    margin-bottom: 79px;
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
 
+    .footer-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 20px;
+        border-bottom: 1px solid #ccc;
+        padding: 45px 110px 35px 110px;
+
+        @media (max-width: 786px) {
+            flex-direction: column;
+            padding: 60px 30px 38px 30px;
+            gap: 38px;
+        }
+
+        .footer-logo {
+            height: 40.27px;
+        }
+
+        .footer-links {
+            display: flex;
+            align-items: center;
+            gap: 27.33px;
+
+            @media (max-width: 786px) {
+                gap: 18.27px;
+            }
+        }
+    }
+
+    .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 27.33px;
+
+        .footer-icons {
+            display: flex;
+            align-items: center;
+            gap: 27.33px;
+            padding-top: 35px;
+            
+
+            .partner-icon {
+                width: 50px;
+                height: auto;
+            }
+
+            @media (max-width: 786px) {
+                gap: 18.27px;
+            }
+        }
+
+        .footer-description {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+            color: var(--white);
+            font-size: 12px;
+
+
+            .footer-description-text {
+                max-width: 800px;
+
+                @media (max-width: 786px) {
+                   font-size: 14px;
+                   
+                }
+            }
+        }
+
+        @media (max-width: 786px) {
+            gap: 18.27px;
+        }
+    }
+
     @media (max-width: 1280px) {
+        border-radius: 43px 43px 0px 0px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 0;
     }
 }

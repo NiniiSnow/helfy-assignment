@@ -6,13 +6,15 @@ export function Card({ name, date, text, verified = true }) {
 
   return `
     <div class="card">
-      <h3 class="card-name">${name}</h3>
-      <p class="card-date">${date}</p>
-      <p class="card-text">${text}</p>
-      <div class="card-dots">....</div>
+        <div>
+            <h3 class="card-name">${name}</h3>
+            <p class="card-date">${date}</p>
+        </div>
+        <p class="card-text">${text}</p>
+        <div class="card-dots">....</div>
       ${verified ? `
         <div class="card-verified">
-          <img src="/assets/images/check.svg" alt="Verified" class="card-verified-icon">
+          <img src="/assets/images/verification-icon.svg" alt="Verified" class="card-verified-icon">
           <span>Verifizierte Bewertung</span>
         </div>
       ` : ''}
